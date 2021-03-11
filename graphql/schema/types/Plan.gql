@@ -1,0 +1,53 @@
+type Plan {
+  id: ID!
+  idPlan: ID!
+  name: String!
+  description: String!
+  price: Price
+  benefits: Benefits
+}
+
+type Price {
+  currency: CurrencyEnum!
+  amount: Float!
+}
+type Benefits {
+  posts: Int
+  postLimit: Int
+  photographs: Int
+  branchOffice: Int
+  sections: Sections
+}
+type Sections {
+  allow: Int
+  videos: Int
+}
+
+enum CurrencyEnum {
+  DOP
+  USD
+}
+
+input PlanInput {
+  idPlan: ID!
+  name: String!
+  description: String!
+  price: PriceInput!
+  benefits: BenefitsInput!
+}
+
+input PriceInput {
+  currency: CurrencyEnum!
+  amount: Float!
+}
+input BenefitsInput {
+  posts: Int!
+  postLimit: Int!
+  photographs: Int!
+  branchOffice: Int!
+  sections: SectionsInput!
+}
+input SectionsInput {
+  allow: Int!
+  videos: Int!
+}

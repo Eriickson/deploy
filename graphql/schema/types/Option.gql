@@ -1,0 +1,9 @@
+type Option {
+  value: String!
+  label: String!
+  createdAt: String
+  updatedAt: String
+}
+input OptionInput {
+  label: String!
+}

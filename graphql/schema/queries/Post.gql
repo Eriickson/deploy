@@ -1,0 +1,7 @@
+type Query {
+  getPost(uuid: ID!): Post!
+  getRecentPosts: [Post!]!
+  getMyPosts: [Post!]!
+  getPostToUpdate(uuid: ID!): Post!
+  updatePost(uuid: ID!): Post!
+}

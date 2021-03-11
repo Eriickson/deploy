@@ -1,0 +1,10 @@
+type Query {
+  getUserProfile(idUser: ID!): GetUserProfileResponse
+}
+
+type GetUserProfileResponse {
+  user: User
+  provinces: [Option]
+  municipalities: [Option]
+  sectors: [Option]
+}

@@ -1,0 +1,16 @@
+type Contact {
+  numberPhones: [TitleValue]
+  emails: [TitleValue]
+}
+input ContactInput {
+  numberPhones: [TitleValueInput]
+  emails: [TitleValueInput]
+}
+type TitleValue {
+  title: String
+  value: String
+}
+input TitleValueInput {
+  title: String
+  value: String
+}

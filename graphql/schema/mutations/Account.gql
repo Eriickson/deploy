@@ -1,0 +1,4 @@
+type Mutation {
+  registerAccount(email: String!): ResponseType!
+  verifyAccount(email: String!, code: String!): String!
+}

@@ -1,0 +1,28 @@
+type Agency {
+  id: ID
+  uuid: ID
+  name: String
+  logo: String
+  slogan: String
+  description: String
+  slug: String
+  occupation: OccupationEnum
+  posts: [Post]
+  branchOffice: BranchOffice!
+  status: String
+  createdAt: String
+  inabilitedAt: [InabilitedAt]
+  owner: User
+}
+input AgencyInput {
+  name: String
+  logo: PictureInput
+  slogan: String
+  description: String
+  ubication: DirectionInput!
+  contacts: ContactInput
+}
+enum OccupationEnum {
+  SALE
+  RENT
+}

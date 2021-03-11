@@ -1,0 +1,11 @@
+input PictureInput {
+  file: Upload
+  croppedArea: CroppedAreaInput
+}
+
+input CroppedAreaInput {
+  height: Int
+  width: Int
+  x: Int
+  y: Int
+}

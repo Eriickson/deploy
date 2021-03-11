@@ -1,0 +1,13 @@
+type Pricing {
+  coin: CoinEnum
+  price: Float
+}
+input PricingInput {
+  coin: CoinEnum
+  price: Float
+}
+
+enum CoinEnum {
+  DOP
+  USD
+}

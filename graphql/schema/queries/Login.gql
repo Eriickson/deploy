@@ -1,0 +1,4 @@
+type Query {
+  verifyAuth(token: String!): Boolean!
+  validateRequestResetPassword(token: String!): String!
+}

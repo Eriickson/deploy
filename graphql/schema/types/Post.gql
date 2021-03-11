@@ -1,0 +1,98 @@
+type Post {
+  id: ID
+  uuid: ID
+  title: String
+  description: String
+  cover: String
+  tags: [String]
+  slug: String
+  visits: Int
+  removedAt: RemovedAt
+  ratings: String
+  createdAt: String
+  branchOffice: BranchOffice
+  brand: ID
+  model: ID
+  year: Int
+  mileage: Mileage
+  fuel: FuelEnum
+  transmission: TransmissionEnum
+  paintColor: Int
+  interiorColor: Int
+  photographs: [String]
+  pricing: Pricing
+  numberDoor: Int
+  category: Int
+  condition: Int
+  features: [String]
+  props: [String]
+  contras: [String]
+  scores: [Score]
+  sections: [Section]
+  cylinder: Int
+  passengers: Int
+  editsAllowed: Int
+  traction: TractionEnum
+  accesories: [String]
+  agency: Agency
+  isTheOwner: Boolean
+}
+input PostInput {
+  title: String
+  description: String
+  tags: [String]
+  brand: ID
+  model: ID
+  year: Int
+  mileage: MileageInput
+  fuel: [FuelEnum]
+  transmission: TransmissionEnum
+  paintColor: [Int]
+  interiorColor: [Int]
+  photographs: [PictureInput]
+  pricing: PricingInput
+  numberDoor: Int
+  category: Int
+  condition: Int
+  cover: String
+  features: [String]
+  props: [String]
+  contras: [String]
+  cylinder: Int
+  passengers: Int
+  traction: TractionEnum
+  accesories: [String]
+  scores: [ScoreInput]
+}
+
+enum FuelEnum {
+  GASOLINE
+  GAS
+  DIESEL
+  ELECTRIC
+  HYBRID
+}
+
+enum MileageEnum {
+  KM
+  MI
+}
+
+enum TractionEnum {
+  FWD
+  RWD
+  AWD
+  _4WD
+}
+"""
+AT(Automatic Transmission)
+MT(Manual Transmission)
+AMT(Automated Manual Transmission)
+CVT(Continuously Variable Transmission)
+"""
+enum TransmissionEnum {
+  AT
+  MT
+  AMT
+  CVT
+}

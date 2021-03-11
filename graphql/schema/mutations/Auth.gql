@@ -1,0 +1,4 @@
+type Mutation {
+  login(email: String!, password: String!): AuthPayload!
+  refreshTokens(token: String!, refreshToken: String!): AuthPayload!
+}
